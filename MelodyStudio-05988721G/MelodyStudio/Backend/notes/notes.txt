@@ -1,0 +1,38 @@
+vitalsanity-backend/
+├── app.js
+├── server.js
+├── package.json
+├── firebase/
+│   ├── firebase.js
+│   └── serviceAccountKey.json
+├── config/
+│   └── passport.js
+├── controllers/
+│   ├── authController.js
+│   ├── userController.js
+│   ├── resourceController.js
+│   ├── appointmentController.js
+│   └── reviewController.js
+├── services/
+│   ├── authService.js
+│   ├── userService.js
+│   ├── resourceService.js
+│   ├── appointmentService.js
+│   └── reviewService.js
+├── routes/
+│   ├── auth.js
+│   ├── users.js
+│   ├── resources.js
+│   ├── appointments.js
+│   └── reviews.js
+├── middlewares/
+│   ├── authMiddleware.js
+│   └── roleMiddleware.js
+├── tests/
+│   ├── auth.test.js
+│   ├── users.test.js
+│   ├── resources.test.js
+│   ├── appointments.test.js
+│   └── reviews.test.js
+
+

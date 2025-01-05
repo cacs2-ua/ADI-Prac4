@@ -1,0 +1,105 @@
+ADI - Práctica 3 - Alumno - Cristian Andrés Córdoba Silvestre - DNI - 05988721G
+
+
+---- DESCRIPCIÓN DE LA APLICACIÓN DESARROLLADA ----
+
+MelodyStudio es una aplicación Web donde artistas apasionados de la música pueden pedir citas para grabar sus maquetas y sus obras musicales.
+
+Con respecto al esquema de base de datos de la práctica anterior, lo único que cambia es que ahora los usuarios pueden tener de rol "client" o "admin", en lugar de "user" y "medical-center"
+El esquema de base de datos es exactamente igual, con exactamente las mismas entidades y los mismos atributos. Únicamente cambia el pequeño detalle mencionado en los roles.
+
+---- INSTRUCCIONES PARA PONER EN MARCHA LA PRÁCTICA ----
+
+Paso 1: Ejecutar el backend
+
+Ejecutar la siguiente secuencia de comandos desde la carpeta raiz del proyecto:
+
+
+cd Backend
+npm install
+node .\app.js
+
+
+Paso 2: Ejecutar el frontend
+
+Ejecutar la siguiente secuencia de comandos desde la carpeta raiz del proyecto:
+
+
+cd Frontend
+npm install
+npm run dev
+
+Navegar a:  http://localhost:5173/
+
+
+Paso 3 (opcional): Ejecutar el frontend con React
+
+Ejecutar la siguiente secuencia de comandos desde la carpeta raiz del proyecto:
+
+
+cd react-melodystudio
+npm install
+npm start
+
+Navegar a:  http://localhost:3000/
+
+
+Asimismo, en Firebase Authentication y Firestore ya vienen preregistrados los siguientes usuarios con las siguientes credenciales:
+
+email: client1@melodystudio.com
+username: client1
+password: client1client1
+role: client
+
+
+email: client2@melodystudio.com
+username: client1
+password: client2client2
+role: client
+
+
+email: admin@melodystudio.com
+username: admin
+password: adminadmin
+role: admin
+
+
+**NOTA: Cuando se usa el registro de la web, se registra un usuario con rol de "client".
+
+
+---- REQUISITOS OPCIONALES IMPLEMENTADOS ----
+
+Se han implementado todos y cada uno de los requisitos opcionales explicados en el enunciado de la práctica:
+
+1-. La búsqueda y la paginación se han implementado tanto para el listado de Incidencias como para el listado de Citas.
+    La búsqueda filtra las tareas y las incidencias mediante su título a través de prefijación.
+    La paginación implementada ha sido una paginación por cursor (Los recursos se van mostrando a partir de un botón "Cargar Más")
+    Las tareas y las incidencias se muestran de 3 en 3 cuando se inicia sesión como cliente
+    Las tareas y las incidencias se muestran de 5 en 5 cuando se inicia sesión como admin
+    Tanto la paginación como la búsqueda son completamente compatibles entre sí.
+
+2-. Se han añadido las siguientes animaciones/transicciones:
+    Efecto de que el formulario tiembla cuando se introduce un login incorrecto
+    Transiciones al cambiar de elementos de la navbar
+    Animación de aparición del texto introductorio de la HomePage
+    Animaciones cuando se borran/añaden citas/incidencias
+
+3-. Como framework de componentes visuales se ha utilizado bootstrap-vue. Se ha utilizado este framwework para implementar lo siguiente:
+    -. La navbar (b-navbar)
+    -. Los modales para mostrar los detalles de las citas y de las incidencias (b-modal)
+    -. El formulario de Contáctanos en la HomePage (b-col, b-row, b-form, b-alert)
+    -. Las tarjetas de "¿Por Qué Elegir MelodyStudio?" en la HomePage (b-container)
+    -. El botón de "Reserva tu Cita" en la HomePage (b-button)
+
+4-. Se ha utilizado Vue Router como enrutador para gestionar la navegación por la app (router/index.js)
+
+5-. Se han implementado el listado y el CRUD para dos recursos diferentes: citas e incidencias.
+
+6-. Se han implementado el listado y la eliminación de las citas en el framework React (carpeta "react-melodystudio")
+
+7-. El usuario administrador puede acceder al listado y a los detalles de las citas y de las incidencias de TODOS los usuarios de la aplicación. El usuario administrador puede borrar cualquier cita y cualquier incidencia de cualquier usuario. El usuario administrador no puede ni crear ni editar citas/incidencias.
+
+8-. Los usuarios clientes solo pueden tener acceso a sus propias citas e incidencias; no pueden tener acceso a las del resto de usuarios.
+
+
+
